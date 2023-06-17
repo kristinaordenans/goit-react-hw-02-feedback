@@ -39,7 +39,8 @@ export class App extends Component {
          <div>
             <Section title="Please leave feedback">
                <FeedbackOptions
-                  onLeaveFeedback={this.handleIncrement} />
+                   onLeaveFeedback={this.handleIncrement}
+                   options={Object.keys(this.state)} />
             </Section>
             {this.countTotalFeedback() <= 0 ? <Notification message="There is no feedback"/> :    
             <Section title="Section">
